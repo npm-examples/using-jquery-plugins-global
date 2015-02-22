@@ -3,17 +3,22 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "browserify --transform --global-transform cssify entry.js > bundle.js; opener index.html"
+    "build-css": "parcelify entry.js -c bundle.css",
+    "build-js": "browserify entry.js > bundle.js",
+    "start": "npm run build-css && npm run build-js && opener index.html"
   },
   "dependencies": {
     "jquery": "^2.1.3",
     "tipso": "^1.0.2"
   },
   "devDependencies": {
-    "cssify": "^0.6.0",
-    "opener": "^1.4.0"
+    "opener": "^1.4.0",
+    "parcelify": "^0.12.5"
   },
   "browser": {
     "tipso": "./node_modules/tipso/src/tipso.js"
-  }
+  },
+  "style": [
+    "./node_modules/tipso/src/tipso.css"
+  ]
 }
