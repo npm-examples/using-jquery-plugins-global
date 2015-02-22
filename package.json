@@ -2,12 +2,16 @@
   "name": "using-jquery-plugins-global",
   "version": "1.0.0",
   "license": "MIT",
+  "scripts": {
+    "start": "browserify --transform --global-transform cssify entry.js > bundle.js; opener index.html"
+  },
   "dependencies": {
     "jquery": "^2.1.3",
     "tipso": "^1.0.2"
   },
   "devDependencies": {
-    "cssify": "^0.6.0"
+    "cssify": "^0.6.0",
+    "opener": "^1.4.0"
   },
   "browser": {
     "tipso": "./node_modules/tipso/src/tipso.js"
