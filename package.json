@@ -12,6 +12,7 @@
     "tipso": "^1.0.2"
   },
   "devDependencies": {
+    "browserify": "^9.0.3",
     "opener": "^1.4.0",
     "parcelify": "^0.12.5"
   },
